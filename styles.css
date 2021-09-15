@@ -1,0 +1,219 @@
+html{
+    background-color: #151515;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: #151515;
+}
+.navbar {
+    background:#3C415C;
+}
+.nav-link,
+.navbar-brand {
+    color: #FFFF;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.avatar{
+    max-width:50px;
+    max-height:50px;
+    width:50px;
+    height:50px;
+    border-radius: 20%;
+    position: relative;
+}
+
+.navbar-toggler-icon{
+    display:inline-block;
+    width:1.5em;
+    height:1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.avatar-div{
+    position: relative;
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    width: 50px;
+    height:50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-link {
+    text-align: center;
+}
+.nav-link:hover {
+    color: #000;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-toggler{
+    font-size: 1.171875rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.content-area{
+    height: 100vh;
+    background-color: #151515;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+.content-area h1{
+    color: #fff;
+    text-align: center;
+    margin-left: 160px;
+    font-size: 3vw;
+    font-family: 'Montserrat';
+}
+
+.about h2{
+    color: #fff;
+    text-align: center;
+}
+
+.contact h2{
+    color: #fff;
+    text-align: center;
+    margin-left: 160px;
+}
+
+
+.logo{
+    max-width:75px;
+    max-height:75px;
+    width:75px;
+    height:75px;
+    border-radius: 20%;
+    position: relative;
+}
+
+.img-container{
+    position: relative;
+    display: block;
+    max-width: 75px;
+    max-height: 75px;
+    width: 75px;
+    height:75px;
+    padding-left: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-color: #151515;
+}
+.navbar.fixed-left{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1030;
+}
+@media (min-width:768px){
+    .navbar.fixed-left{
+        bottom:0;width:160px;
+        flex-flow:column nowrap;
+        align-items:flex-start
+    }
+    .navbar.fixed-left .navbar-collapse{
+        flex-grow:0;
+        flex-direction:column;
+        width:100%
+    }
+    .navbar.fixed-left .navbar-collapse .navbar-nav{
+        flex-direction:column;
+        width:100%
+    }
+    .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item{
+        width:100%
+    }
+    .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu{
+        top:0
+    }
+    .navbar-expand-md .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (min-width:768px){
+    .navbar.fixed-left{
+        right:auto;
+    }
+    .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after{
+        border-top:.3em solid transparent;
+        border-left:.3em solid;
+        border-bottom:.3em solid transparent;
+        border-right:none;
+        vertical-align:baseline;
+    }
+    .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu{
+        left:100%;
+    }
+}
+@media (max-width:768px){
+    .content-area h1{
+        color: #fff;
+        text-align: center;
+        margin-left: 0px;
+        font-size: 8vw;
+        font-family: 'Montserrat';
+    }
+    .contact h2{
+        color: #fff;
+        margin-left: 0px;
+        text-align: center;
+    }
+    .content-area{
+        height: 100vh;
+        background-color: #151515;
+        width: 100%;
+        display: grid;
+        place-content: center;
+        z-index: 2;
+        position: relative;
+    }
+    .img-container{
+        position: relative;
+        display: block;
+        max-width: 75px;
+        max-height: 75px;
+        width: 75px;
+        height:75px;
+        padding-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .navbar.fixed-left{
+        right: none;
+    }
+    .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after{
+        border-top: 0px;
+        border-left: 0px;
+        border-bottom: 0px;
+        border-right:none;
+        vertical-align:none;
+    }
+    .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu{
+        left:0%;
+    }
+    .navbar-expand-md .navbar-toggler {
+        display: inline-flex;
+    }
+}
