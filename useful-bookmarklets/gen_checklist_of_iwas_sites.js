@@ -37,7 +37,7 @@
     // Convert the array to plain text format with new lines
 
 
-    var plainText = websiteLinks.map((link, index) => `[] ${schoolNames[index]} \n${link}`).join("\n\n");
+    var plainText = websiteLinks.map((link, index) => `[] ${schoolNames[index]}\n${link}`).join("\n\n");
 
     // Create a temporary textarea to copy the plain text to clipboard
     var tempTextarea = document.createElement("textarea");
