@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sons of The Forest Server Redirect</title>
+    <link rel="stylesheet" href="sotf.css">
+</head>
+<body>
+    <h1>Sons of The Forest Server Redirect</h1>
+    <p>You will now be automatically redirected to the server</p>
+    <p>If you are not redirected, click the button below</p>
+    <button class="join-server">Join Server</button>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            window.location.href = "steam://run/1326470//+connect 103.214.108.13:7787/";
+        }, 250);
+
+        const joinServerButton = document.querySelector('.join-server');
+        joinServerButton.addEventListener('click', function() {
+            window.location.href = "steam://run/1326470//+connect 103.214.108.13:7787/";
+            this.style.backgroundColor = 'green';
+        });
+    });
+</script>
+</body>
+</html>
+
