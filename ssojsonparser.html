@@ -27,6 +27,7 @@
       background-color: rgba(255, 255, 255, 0.9);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
+      box-sizing: border-box;
     }
     #output, #raw-json {
       display: none;
@@ -38,6 +39,8 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      overflow-x: auto;
     }
     .field {
       display: flex;
@@ -47,6 +50,8 @@
       border-bottom: 1px solid #eee;
       padding-bottom: 5px;
       position: relative;
+      flex-wrap: wrap;
+      word-wrap: break-word;
     }
     .field .fieldName {
       font-weight: bold;
@@ -57,6 +62,7 @@
     .field .value {
       text-align: right;
       flex: 2;
+      word-wrap: break-word;
     }
     .checkmark {
       position: absolute;
@@ -93,6 +99,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       resize: none;
       font-family: 'Courier New', Courier, monospace;
+      box-sizing: border-box;
     }
   </style>
 </head>
