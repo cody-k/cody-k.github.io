@@ -11,6 +11,11 @@
       text-align: center;
       background-color: #f0f2f5;
       color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #333;
+      color: #f0f2f5;
     }
     h1, h3 {
       margin: 0 0 20px;
@@ -28,6 +33,11 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       box-sizing: border-box;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode #drop-area {
+      color: #ccc;
+      background-color: rgba(0, 0, 0, 0.9);
     }
     #output, #raw-json {
       display: none;
@@ -41,6 +51,11 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
       overflow-x: auto;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode #output, body.dark-mode #raw-json {
+      background-color: #444;
+      color: #f0f2f5;
     }
     .field {
       display: flex;
@@ -52,6 +67,9 @@
       position: relative;
       flex-wrap: wrap;
       word-wrap: break-word;
+    }
+    body.dark-mode .field {
+      border-bottom: 1px solid #555;
     }
     .field .fieldName {
       font-weight: bold;
@@ -100,6 +118,47 @@
       resize: none;
       font-family: 'Courier New', Courier, monospace;
       box-sizing: border-box;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode #raw-json {
+      background-color: #333;
+      border-color: #555;
+      color: #f0f2f5;
+    }
+    .toggle-switch {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 60px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .toggle-switch .toggle-thumb {
+      width: 24px;
+      height: 24px;
+      background-color: #FFC344;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+    body.dark-mode .toggle-switch {
+      background-color: #4d67da;
+    }
+    body.dark-mode .toggle-thumb {
+      transform: translateX(32px);
+      background-color: #c2cfdbf6;
+      
+    }
+    .toggle-switch .icon {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      display: none;
     }
   </style>
 </head>
@@ -108,11 +167,15 @@
   <div id="drop-area">Drop JSON file here</div>
   <div id="output"></div>
   <textarea id="raw-json" readonly></textarea>
+  <div id="toggle-dark-mode" class="toggle-switch">
+    <div class="toggle-thumb"></div>
+  </div>
 
   <script>
     const dropArea = document.getElementById('drop-area');
     const output = document.getElementById('output');
     const rawJson = document.getElementById('raw-json');
+    const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
     let dragCounter = 0;
 
     const fieldNames = {
@@ -125,6 +188,24 @@
       redirect_uris: "Redirect URIs",
       javascript_origins: "JavaScript Origins"
     };
+
+    function loadDarkModePreference() {
+      const darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+      }
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    toggleDarkModeButton.addEventListener('click', toggleDarkMode);
 
     window.addEventListener('dragover', (event) => {
       event.preventDefault();
@@ -220,6 +301,8 @@
         checkmark.style.display = 'none';
       }, 1000);
     }
+
+    loadDarkModePreference();
   </script>
 </body>
 </html>
