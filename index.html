@@ -15,6 +15,9 @@
     <meta property="twitter:title" content="Cody Keller - Developer Portfolio">
     <meta property="twitter:description" content="Projects and tools created by Cody Keller">
 
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/favicon.png" type="image/png">
+
     <title>Cody Keller</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,6 +113,50 @@
             font-weight: 400;
             font-style: normal;
         }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .project-item {
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-item h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.5rem;
+        }
+
+        .project-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .project-links img {
+            width: 16px;
+            height: 16px;
+        }
     </style>
 </head>
 <body>
@@ -123,7 +170,21 @@
             <!-- Neat! *click* -->
             <h2>Projects</h2>
             <p>Here are some of my recent projects:</p>
-            
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h3>Google API Credentials Parser</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/codyklr/Google-API-Credentials-Parser" target="_blank" rel="noopener noreferrer">
+                            <img src="svgs/socials/github-white.svg" alt="GitHub" aria-label="GitHub Repository">
+                            Repo
+                        </a>
+                        <a href="https://parse.codyklr.com" target="_blank" rel="noopener noreferrer">
+                            <img src="svgs/utils/link.svg" alt="Live" aria-label="Live Website">
+                            Live
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section" id="about">
