@@ -28,9 +28,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Fira Code', monospace;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            background-color: #0a0a0a;
             color: #ffffff;
-            min-height: 100vh;
         }
         nav {
             background-color: #1a1a1a;
@@ -69,77 +68,95 @@
             color: #a0a0a0;
         }
         .section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         .section h2 {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
+            margin-bottom: 1rem;
         }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        .project-item {
+        pre {
             background-color: #1a1a1a;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
         }
-        .project-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .project-item h3 {
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-        }
-        .project-links {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
-        }
-        .project-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: flex;
-            padding: 8px 12px;
-            align-items: center;
-            gap: 0.5rem;
-            transition: opacity 0.2s ease;
-        }
-        .project-links a:hover {
-            opacity: 0.8;
+        code {
+            font-family: 'Fira Code', monospace;
+            display: block;
+            white-space: initial;
         }
         .contact-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
         .contact-link {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
             color: #ffffff;
             text-decoration: none;
-            padding: 8px 12px;
-            transition: opacity 0.2s ease;
         }
-        .contact-link:hover {
-            opacity: 0.8;
+        .contact-link img {
+            width: 24px;
+            height: 24px;
+        }
+        .contact-link svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
         }
         .name {
             font-family: "Gloria Hallelujah", cursive;
             font-weight: 400;
             font-style: normal;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .project-item {
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-item h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.5rem;
+        }
+
+        .project-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            padding: 5px;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .project-links img {
+            width: 16px;
+            height: 16px;
         }
     </style>
 </head>
@@ -147,11 +164,13 @@
     <main>
         <div class="hero">
             <h1 class="name">Cody Keller</h1>
-            <p>Building useful tools and automating the boring stuff</p>
+            <p>i make stuff</p>
         </div>
 
         <div class="section" id="projects">
+            <!-- Neat! *click* -->
             <h2>Projects</h2>
+            <p>Here are some of my recent projects:</p>
             <div class="projects-grid">
                 <div class="project-item">
                     <h3>Google API Credentials Parser</h3>
@@ -167,7 +186,7 @@
                     </div>
                 </div>
                 <div class="project-item">
-                    <h3>Password Generator</h3>
+                    <h3>Password<br>Generator</h3>
                     <div class="project-links">
                         <a href="https://github.com/codyklr/Password-Generator" target="_blank" rel="noopener noreferrer">
                             <img src="svgs/socials/github-white.svg" alt="GitHub" aria-label="GitHub Repository">
@@ -184,7 +203,7 @@
 
         <div class="section" id="about">
             <h2>About Me</h2>
-            <p>I build automation tools and side projects with a focus on practical solutions. Currently experimenting with ML and working on new tools.</p>
+            <p>I create tools and other random things for fun. I enjoy solving problems and automating tasks to make life easier (or just more interesting).</p>
         </div>
 
         <div class="section" id="contact">
@@ -192,12 +211,15 @@
             <div class="contact-links">
                 <a href="https://github.com/codyklr" class="contact-link">
                     <img src="svgs/socials/github-white.svg" alt="GitHub" aria-label="GitHub Profile">
+                    <!-- codyklr -->
                 </a>
                 <a href="https://x.com/codyklr" class="contact-link">
                     <img src="svgs/socials/twitter-x.svg" alt="Twitter" aria-label="Twitter / X Profile">
+                    <!-- @codyklr -->
                 </a>
             </div>
         </div>
     </main>
 </body>
+<!-- Existing is basically all I do! -->
 </html>
