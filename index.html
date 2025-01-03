@@ -4,234 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Cody Keller's developer portfolio. Projects and tools created by Cody Keller.">
     <meta name="keywords" content="Cody Keller, developer, portfolio, projects, tools, automation">
     <meta name="author" content="Cody Keller">
-
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.codyklr.com/">
     <meta property="twitter:title" content="Cody Keller - Developer Portfolio">
     <meta property="twitter:description" content="Projects and tools created by Cody Keller">
-
-    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
-    
-    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="imgs/apple-touch-icon.png">
-    
-    <!-- Android Chrome Icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="imgs/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="imgs/android-chrome-512x512.png">
-    
-    <!-- Web Manifest -->
     <link rel="manifest" href="site.webmanifest">
 
     <title>Cody Keller</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Fira Code', monospace;
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-        nav {
-            background-color: #1a1a1a;
-            padding: 1rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .hero {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #a0a0a0;
-        }
-        .section {
-            margin-bottom: 3rem;
-        }
-        .section h2 {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        pre {
-            background-color: #1a1a1a;
-            padding: 1rem;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: 'Fira Code', monospace;
-            display: block;
-            white-space: initial;
-        }
-        .contact-links {
-            display: flex;
-            gap: 1rem;
-        }
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .contact-link img {
-            width: 24px;
-            height: 24px;
-        }
-        .contact-link svg {
-            width: 24px;
-            height: 24px;
-            fill: #ffffff;
-        }
-        .name {
-            font-family: "Gloria Hallelujah", cursive;
-            font-weight: 400;
-            font-style: normal;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .project-item {
-            background-color: #1a1a1a;
-            padding: 1rem;
-            border-radius: 4px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-item h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1rem;
-        }
-
-        .project-links {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 0.5rem;
-        }
-
-        .project-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: flex;
-            padding: 5px;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .project-links a:hover {
-            text-decoration: underline;
-        }
-
-        .project-links img {
-            width: 16px;
-            height: 16px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <div class="hero">
-            <h1 class="name">Cody Keller</h1>
-            <p>building useful tools and automating the boring stuff</p>
+    <div class="container">
+        <div class="left-section">
+            <img src="imgs/me.jpg" alt="Profile Picture">
+            <h1>Cody Keller</h1>
+            <p>Independent Developer</p>
         </div>
-
-        <div class="section" id="projects">
-            <!-- Neat! *click* -->
-            <h2>Projects</h2>
-            <p>Here are some of my recent projects:</p>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <h3>Google API Credentials Parser</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/codyklr/Google-API-Credentials-Parser" target="_blank" rel="noopener noreferrer">
-                            <img src="svgs/socials/github-white.svg" alt="GitHub" aria-label="GitHub Repository">
-                            Repo
-                        </a>
-                        <a href="https://parse.codyklr.com" target="_blank" rel="noopener noreferrer">
-                            <img src="svgs/utils/link.svg" alt="Live" aria-label="Live Website">
-                            Live
-                        </a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <h3>Password<br>Generator</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/codyklr/Password-Generator" target="_blank" rel="noopener noreferrer">
-                            <img src="svgs/socials/github-white.svg" alt="GitHub" aria-label="GitHub Repository">
-                            Repo
-                        </a>
-                        <a href="https://pw.codyklr.com" target="_blank" rel="noopener noreferrer">
-                            <img src="svgs/utils/link.svg" alt="Live" aria-label="Live Website">
-                            Live
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="right-section">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I make tools, websites, and occasionally coherent thoughts.</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Recent Projects</h2>
+                <ul>
+                    <li><a href="https://github.com/codyklr/password-generator">Password Generator</a></li>
+                    <li><a href="https://github.com/codyklr/Google-API-Credentials-Parser">Google API Credentials Parser</a></li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p><a href="https://github.com/codyklr">GitHub</a> | <a href="https://linkedin.com/in/codyklr">LinkedIn</a> | <a href="https://x.com/codyklr">X</a></p>
+            </section>
         </div>
-
-        <div class="section" id="about">
-            <h2>About Me</h2>
-            <p>I build small projects with a focus on practical solutions. Currently experimenting with ML and working on new tools.</p>
-        </div>
-
-        <div class="section" id="contact">
-            <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="https://github.com/codyklr" class="contact-link">
-                    <img src="svgs/socials/github-white.svg" alt="GitHub" aria-label="GitHub Profile">
-                    <!-- codyklr -->
-                </a>
-                <a href="https://x.com/codyklr" class="contact-link">
-                    <img src="svgs/socials/twitter-x.svg" alt="Twitter" aria-label="Twitter / X Profile">
-                    <!-- @codyklr -->
-                </a>
-            </div>
-        </div>
-    </main>
+    </div>
 </body>
-<!-- Existing is basically all I do! -->
 </html>
