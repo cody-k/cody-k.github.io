@@ -1,22 +1,29 @@
 /* Global Styles */
 body {
+    min-height: 100vh;
     font-family: "Space Mono", monospace, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
     background: #F4F4F2;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Container */
 .container {
+    flex: 0 1 auto;
     display: flex;
-    width: 80%;
+    flex-direction: row;
+    width: 100%;
     max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
+
 
 /* Left Section */
 .left-section {
@@ -74,6 +81,7 @@ body {
     margin-bottom: 5px;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: black;
@@ -83,14 +91,24 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        width: 100%;
+        align-items: center;
+        padding: 20px;
     }
 
-    .right-section {
-        padding-top: 10px;
+    .left-section, .right-section {
+        width: 100%;
+        padding: 10px;
     }
 }
