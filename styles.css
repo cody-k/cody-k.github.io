@@ -112,3 +112,9 @@ footer {
         padding: 10px;
     }
 }
+
+a[href^="http"]::after,
+a[href^="https"]::after {
+    content: " ⧉";
+    font-size: 0.8em;
+}
